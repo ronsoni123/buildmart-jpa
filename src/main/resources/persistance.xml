@@ -1,14 +1,7 @@
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
     <persistence-unit name="persistence-unit" transaction-type="RESOURCE_LOCAL">
-        <!-- <persistence-unit name="my-persistence-unit" transaction-type="JTA">
-            <jta-data-source>myJtaDataSource</jta-data-source>
-            <non-jta-data-source>myNonJtaDataSource</non-jta-data-source> -->
 
-        <!-- <class>com.itbulls.learnit.jpa.entities.User</class> -->
-        <!-- <jar-file>my-entities.jar</jar-file> -->
-
-        <!-- <exclude-unlisted-classes>true</exclude-unlisted-classes> -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="jakarta.persistence.jdbc.driver"
