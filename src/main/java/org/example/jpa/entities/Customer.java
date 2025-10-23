@@ -1,9 +1,6 @@
 package org.example.jpa.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -15,9 +12,12 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @Column(name = "c_name")
     private String name;
 
+    @Column(name="mob_no")
     private String mobile_no;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
     List<Address> addresses;
 }
